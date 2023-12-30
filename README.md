@@ -1,15 +1,15 @@
-# mockin - a mock login server for the Hellō Wallet
+# Mockin - A Mock Login Server for Hellō
 
-A mock OpenID Connect Service that fully implements the functionality of Hellō. Available as an npm module or a Docker image. Can be used during development, local testing, or automated E2E testing in a CI/CD pipeline.
+Mockin is a versatile OpenID Connect Service designed specifically for Hellō, offering a comprehensive implementation of its functionalities. It's available both as an npm module and a Docker image, providing flexibility for various development environments.
 
-## Development 
+## Development Integration
 
-When you app is configured to use *mockin*, clicking on the `[ ō Continue with Hellō ]` button will act as an auto login flow, streamlining development of your application.
+Integrating Mockin into your app's workflow simplifies the development process. By configuring your application to utilize Mockin, the `[ ō Continue with Hellō ]` button triggers an automatic login flow. This feature accelerates the development phase by streamlining user authentication.
 
-## Testing
+## Comprehensive Testing Compatibility
 
-Works with all browser test frameworks such as Selenium, Cypress, or Playwright. After redirecting the authorization request to the mockin endpoint, the authorization response will be sent with no UX per the provided (or default) `response_mode`. Your application processes the `code` or `id_token` response, or if mocked, the `error` response such as if a user has cancelled the request.
+Mockin is compatible with leading browser test frameworks like Selenium, Cypress, and Playwright, ensuring a broad range of testing possibilities. It facilitates the testing process by handling the authorization requests and responses seamlessly. The tool redirects authorization requests to its endpoint and returns the authorization response according to the specified or default `response_mode`, without any user interaction. This process allows your application to handle various responses, including `code`, `id_token`, or even `error` responses, which simulate scenarios like user request cancellations.
 
-The mock API allows you to mock all errors that may be returned from all endpoints, generate invalid and expired ID Tokens.
+Moreover, Mockin's mock API is capable of simulating all potential errors from Hellō's endpoints. It also allows for the creation of invalid or expired ID Tokens, adding another layer of testing robustness.
 
-See the [documention](https://www.hello.dev/docs/mockin) for installation, usage, and examples.
+For detailed information on installation, usage, and examples, visit the [documentation](https://www.hello.dev/docs/mockin).
