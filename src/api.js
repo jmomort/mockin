@@ -3,6 +3,7 @@ import fastifyFormbody from '@fastify/formbody'
 import cors from '@fastify/cors'
 
 import authorize from './authorize.js'
+import version from './version.js'
 import * as mock from './mock.js'
 import * as oauth from './oauth.js'
 
@@ -25,5 +26,6 @@ export default function (fastify) {
     fastify.put('/mock/:mock', mock.put)
     // reset mock
     fastify.delete('/mock', mock.delete)
+    fastify.get('/version', version)
     return fastify    
 }
