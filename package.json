@@ -35,7 +35,7 @@
   },
   "scripts": {
     "build": "docker build -t mockin .",
-    "start": "node ./src/server.js",
+    "start": "node --no-warnings ./src/server.js",
     "test": "mocha",
     "test:debug": "mocha --inspect"
   },
