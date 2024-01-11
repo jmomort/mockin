@@ -26,6 +26,8 @@ export default function (fastify) {
     fastify.put('/mock/:mock', mock.put)
     // reset mock
     fastify.delete('/mock', mock.delete)
+    // version
     fastify.get('/version', version)
+    fastify.get('/', version)
     return fastify    
 }
