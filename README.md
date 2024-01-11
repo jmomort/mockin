@@ -1,15 +1,24 @@
 # Mockin - A Mock Login Server for Hellō
 
-Mockin is a versatile OpenID Connect Service designed specifically for Hellō, offering a comprehensive implementation of its functionalities. It's available both as an npm module and a Docker image, providing flexibility for various development environments.
+Mockin is a mock of the Hellō of the OpenID Connect Login Service and implements the authorization, token, introspection, and userinfo endpoints. 
 
-## Development Integration
+- Development - speeds up development as you won't be redirecting through the Hellō production server. 
+- Testing - simplifies creating end to end tests, and with the `/mock` APIs, can simulate expired and invalid responses allowing you to ensure your app properly handles all exceptions, improving your security posture.
 
-Integrating Mockin into your app's workflow simplifies the development process. By configuring your application to utilize Mockin, the `[ ō Continue with Hellō ]` button triggers an automatic login flow. This feature accelerates the development phase by streamlining user login and registration. 
+## Usage
 
-## Comprehensive Testing
+Mockin is available as both an npm module and a docker image:
 
-Mockin is compatible with leading browser test frameworks like Selenium, Cypress, and Playwright, ensuring a broad range of testing possibilities. It facilitates the testing process by handling the authorization requests and responses seamlessly. After your app redirects requests to the autorization endpoint, Mockin will immediately return the authorization response according to the specified or default `response_mode`. 
+`npx @hellocoop/mockin@latest`
 
-The mock API can simulate errors, and invalid ID Tokens, allowing you to ensure your app properly handles all exceptions, improving your security posture.
+`docker run  -d -p 3333:3333 hellocoop/mockin:latest`
+
+## Issuer
+
+Mockin defaults to `http://127.0.0.1:3333` as the Issuer. Override by setting the `ISSUER` environment variable.
+
+## Mock API
+
+The mock API can change the returned claims, simulate errors, and invalid ID Tokens.
 
 For detailed information on installation, usage, and examples, visit the [documentation](https://www.hello.dev/docs/mockin).
