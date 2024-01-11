@@ -5,7 +5,7 @@ import jwkToPem from 'jwk-to-pem'
 
 import { ISSUER } from './config.js'
 
-const jwks = (await import('./mock.jwks.json', {assert: {type: "json"}})).default
+import jwks from './mock.jwks.js'
 
 const pems = {}
 jwks.keys.forEach( jwk => {

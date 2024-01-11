@@ -2,10 +2,10 @@
 import jwt from 'jsonwebtoken'
 import jwkToPem from 'jwk-to-pem'
 
-const jwk = (await import('./mock.private.jwk.json', {assert: {type: "json"}})).default
+import jwk from './mock.private.jwk.js'
 const pem = jwkToPem(jwk.private,{private:true})  
 
-const jwkWrong = (await import('./wrong.private.jwk.json', {assert: {type: "json"}})).default
+import jwkWrong from './wrong.private.jwk.js'
 const pemWrong = jwkToPem(jwkWrong.private,{private:true})  
 
 

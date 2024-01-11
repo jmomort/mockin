@@ -1,4 +1,4 @@
-{
+const jwks = {
     "keys": [
         {
             "key_ops": [
@@ -34,3 +34,4 @@
         }
     ]
 }
+export default jwks

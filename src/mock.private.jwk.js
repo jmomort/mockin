@@ -1,4 +1,4 @@
-{
+const jwk = {
     "private": {
         "key_ops": [
             "sign"
@@ -28,3 +28,5 @@
         "n": "gSqXqRHtxX4ON6Ply0j08NjsS2fTcPI0R6JYt9OvrfTxkm7hSKb3GCGNOI5jWkLAtKEv92rB8OCs6qUdMmU8zzxnrndopd12ss9Q-IHzkITCsPR0l1evHL4j4T8samzLR-5X4IOBSkJbkj3AHYbeUne_uzUkIuqrLGZP3J5gTXNDbqIdWav1K6HySijYqRbrPmxXkaVlvyYORkSfDYTDOjYulLBVF5C-SNcXultyCrq2YWpwaQe_Havcwxjks2B4QWEIglMU5lleO4ngw9Tk-aJbqBPSb5RcgQ5eZJgXMQBmwCqTPPGl7N_GaCjvGgzz3wbu13WXNLRRSzJXSePv0Q"
     }
 }
+
+export default jwk

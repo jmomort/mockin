@@ -8,6 +8,8 @@ import { ISSUER } from './config.js'
 import verify from './verify.js'
 import { codes } from './authorize.js'
 
+import JWkS from './mock.jwks.js'
+
 const oauthErrorStatusCodes = {
     "access_denied": 403,
     "invalid_client": 401,
@@ -23,7 +25,6 @@ const oauthErrorStatusCodes = {
 };
 
 
-const JWkS = (await import('./mock.jwks.json', {assert: {type: "json"}})).default
 
 export const token = async ( req, res ) => {
     const MOCK = mock()
