@@ -11,7 +11,7 @@ export default mock
 const validMocks = new Set([
     'authorize',
     'claims',
-    'client_secret',
+    'client_secret', //future
     'introspect',
     'invite', // future
     'token',
