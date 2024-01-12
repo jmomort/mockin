@@ -37,7 +37,8 @@
     "build": "docker build -t mockin .",
     "start": "node --no-warnings ./src/server.js",
     "test": "mocha",
-    "test:debug": "mocha --inspect"
+    "test:debug": "mocha --inspect",
+    "publish": "./scripts/publish.sh"
   },
   "devDependencies": {
     "chai": "^4.3.10",
