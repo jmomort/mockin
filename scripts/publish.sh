@@ -16,6 +16,12 @@ then
     exit 1
 fi
 
+# Check if the repository is clean (no uncommitted changes)
+if ! git diff-index --quiet HEAD --; then
+    echo "The repository has uncommitted changes. Please commit or stash them before proceeding."
+    exit 1
+fi
+
 # Extract version from package.json using jq
 VERSION=$(jq -r '.version' package.json)
 
