@@ -7,6 +7,13 @@
     "node": "~18",
     "npm": "~9"
   },
+  "files": [
+    "src",
+    "package.json",
+    "package-lock.json",
+    "README.md",
+    "LICENSE"
+  ],
   "bin": {
     "mockin": "./src/server.js"
   },
