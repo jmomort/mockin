@@ -31,7 +31,7 @@ const users = [{
     "nickname":"Зо́я-Алёна",
     "given_name":"Смирно́вa-Đặng Thị Hồng Ân",
     "family_name":"Николаевна Smirnova-Dang",
-    "picture": "https://pictures.hello.coop/mock/portrait-of-john-smith.jpeg",
+    "picture": "https://pictures.hello.coop/mock/1111.jpeg",
     "email": "Zoya-Alyona@xn--bcher-kva.example.com",
     "phone": "+84912345678",
     "ethereum": "0x1111111111111111111111111111111111111111",
@@ -57,7 +57,7 @@ const users = [{
     "nickname":"AlexanderJonathanMaximillian",
     "given_name":"AlexanderJonathan MaximillianTheodore",
     "family_name":"SebastianArchibaldMontgomeryRutherfordBeauregardFitzwilliamPercivalWolfgangZachariahBartholomewOctaviusLysanderDemetriusNathanielHumphreyWellington",
-    "picture": "https://pictures.hello.coop/mock/portrait-of-john-smith.jpeg",
+    "picture": "https://pictures.hello.coop/mock/2222.jpeg",
     // 254 chars
     "email": "AlexanderJonathanMaximillianTheodoreSebastianArchibaldMontgomery@RutherfordBeauregardFitzwilliamPercivalWolfgangZachariahBartholomewOctaviusLysanderDemetriusNathanielHumphreyWellington.123456789.123456789.123456789.123456789.123456789.1234567.example.com",
     "phone": "+222222222222222",
