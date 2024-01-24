@@ -57,15 +57,15 @@ if [ "$VERSION" = "$PUBLISHED_VERSION" ]; then
 fi
 
 # Building Docker image
-echo "Building Docker image with tag: $VERSION"
-docker build -t "$DOCKER_TAG:latest" -t "$DOCKER_TAG:$VERSION" .
+echo "Building Docker amd64 and arm64 image with tag: $VERSION and pushing to Docker Hub"
+docker buildx build --platform linux/amd64,linux/arm64 -t "$DOCKER_TAG:latest" -t "$DOCKER_TAG:$VERSION" . --push
 
-# Pushing the image to Docker Hub
-echo "Pushing latest tag to Docker Hub"
-docker push "$DOCKER_TAG:latest"
+# # Pushing the image to Docker Hub
+# echo "Pushing latest tag to Docker Hub"
+# docker push "$DOCKER_TAG:latest"
 
-echo "Pushing version $VERSION tag to Docker Hub"
-docker push "$DOCKER_TAG:$VERSION"
+# echo "Pushing version $VERSION tag to Docker Hub"
+# docker push "$DOCKER_TAG:$VERSION"
 
 # Publish to npm
 echo "Publishing version $VERSION to npm"
