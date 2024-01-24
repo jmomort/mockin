@@ -15,7 +15,7 @@
     "LICENSE"
   ],
   "bin": {
-    "mockin": "./src/server.js"
+    "mockin": "src/server.js"
   },
   "repository": {
     "type": "git",
